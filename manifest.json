@@ -1,0 +1,16 @@
+{
+    "name": "Leet-Timer",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Shows leetcode problem solving timer",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "logo.png"
+    },
+    "content_scripts": [
+        {
+            "js": ["./scripts/content.js"],
+            "matches": ["https://leetcode.com/problems/*"]
+        }
+    ]
+}
