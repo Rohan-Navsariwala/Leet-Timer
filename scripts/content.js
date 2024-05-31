@@ -45,8 +45,14 @@ window.onload = function () {
             //making and injecting node
             let prepare_element = document.createElement("div");
             prepare_element.id = "new_box";
-            prepare_element.className = "flex h-3 items-center bg-white rounded-full w-3 z-50";
+            prepare_element.className = "flex h-full justify-center items-center bg-white rounded-full z-50";
             working_node.appendChild(prepare_element);
+
+            let prepare_clock = document.createElement('span');
+            prepare_clock.innerHTML = "00:00";
+            prepare_clock.className = "px-2 py-1 text-black text-center";
+            document.getElementById('new_box').appendChild(prepare_clock);
+
 
         } else {
             console.error("title_object is " + typeof title_object);
@@ -54,4 +60,3 @@ window.onload = function () {
 
     }, 3000);
 }
-
