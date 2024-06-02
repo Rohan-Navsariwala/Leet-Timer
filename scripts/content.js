@@ -44,10 +44,25 @@ window.onload = function () {
             super_parent.childNodes[1].appendChild(prepare_element);
 
             let prepare_clock = document.createElement('span');
-            prepare_clock.innerHTML = "00:00";
-            prepare_clock.className = "px-2 py-1 text-black text-center";
+            prepare_clock.className = "px-2 py-1 text-black text-center font-semibold";
             document.getElementById('new_box').appendChild(prepare_clock);
+            
+            let t_hour, t_min, t_sec;
 
+            if(difficulty == "Easy"){
+                t_hour = 0;
+                t_min = 30;
+                t_sec = 0;
+            }else if(difficulty == "Medium"){
+                t_hour = 1;
+                t_min = 0;
+                t_sec = 0;
+            }else if(difficulty == "Hard"){
+                t_hour = 1;
+                t_min = 30;
+                t_sec = 0;
+            }
+            prepare_clock.innerHTML = t_hour + ":" + t_min + ":" + t_sec;
 
         } else {
             console.error("title_object is " + typeof title_object);
